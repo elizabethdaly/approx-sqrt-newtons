@@ -5,9 +5,14 @@ def sqrt(x):
     z  = 1.0
     # Keep getting a better esitimate for sqrt(x) until you are within
     # two decimal places.
-    while abs(z * z - x) >= 0.01:
+    while abs(z * z - x) >= 0.00001:
         # get a better approx for sqrt.
         z -= (z * z - x) / (2 * z)
-return z
+    return z
 
-sqrt(8.0)
+# Calculate the square root of 8.
+z = sqrt(63.0)
+# Print z
+print(z)
+# Print z^2.
+print(z * z)
